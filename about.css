@@ -1,0 +1,107 @@
+/* ====================================================
+   ABOUT SECTION BASE STYLES
+==================================================== */
+.about {
+  background-color: #100425;
+  color: #dcdcdc;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Gradient heading text */
+.about-heading {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00f0ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  display: inline-block;
+}
+
+/* Main about text block */
+.about-text {
+  max-width: 70rem;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #FAFAFA;
+  padding: 0 1rem;
+}
+
+/* Decorative grid pattern on the right side */
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.034) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.048) 1px, transparent 2px);
+  background-size: 60px 60px;
+  background-position: 30px 0;
+  z-index: 0;
+  transform: scaleX(-1); /* Flips the pattern horizontally */
+}
+
+/* Ensure all child elements appear above ::before layer */
+.about * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ====================================================
+   RESPONSIVE STYLES
+==================================================== */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.5rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .about::before {
+    width: 100px;
+    background-size: 30px 30px;
+    background-position: 15px 0;
+    opacity: 0.2;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Medium Screens (e.g., 1024px range) */
+@media (min-width: 992px) and (max-width: 1120px) {
+  .about-text {
+    padding: 0 3rem; /* Add breathing room */
+  }
+}
+
+/* Larger desktops: Remove extra padding */
+@media (min-width: 1200px) {
+  .about-text {
+    padding: 0;
+  }
+}

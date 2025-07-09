@@ -1,0 +1,152 @@
+/* ====================================================
+   SKILLS SECTION STYLES
+==================================================== */
+.skills {
+  padding: 3rem 5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /* Optional: background-color: #100425; */
+}
+
+/* ====================================================
+   LAYOUT: Skill Cards Row
+==================================================== */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Individual skill category box */
+.skill-category {
+  flex: 1 1 300px;
+  max-width: 400px;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 1.5rem;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-4px);
+}
+
+.skill-category h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #FAFAFA;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-decoration: underline #fafafa57;
+}
+
+/* ====================================================
+   ICON GRID INSIDE EACH CATEGORY
+==================================================== */
+.shift {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.08);
+}
+
+.icon-wrapper i {
+  font-size: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-wrapper p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 200;
+  color: #FAFAFA;
+}
+
+/* ====================================================
+   OPTIONAL BACKGROUND GLOW (currently commented out)
+==================================================== */
+.skills::before,
+.skills::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Uncomment if glow effect is needed:
+.skills::before {
+  top: -11rem;
+  left: -6.25rem;
+  width: 30rem;
+  height: 31.25rem;
+  background: radial-gradient(circle at center, #0cffff96, #3a85ff67);
+  filter: blur(9.375rem);
+  opacity: 0.4;
+}
+
+.skills::after {
+  bottom: -5rem;
+  right: -7.5rem;
+  width: 25rem;
+  height: 25rem;
+  background: radial-gradient(circle at center, #ff0cd6, #3a86ff);
+  filter: blur(8.75rem);
+  opacity: 0.2;
+}
+*/
+
+/* ====================================================
+   RESPONSIVE TWEAKS
+==================================================== */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .skills {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Small tablets and phones */
+@media (max-width: 768px) {
+  .skill-category {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+
+  .skill-category h1 {
+    font-size: 1.25rem;
+  }
+
+  .icon-wrapper i {
+    font-size: 2rem;
+  }
+
+  .icon-wrapper p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile screen fix */
+@media (max-width: 600px) {
+  .skills {
+    padding: 2rem 1rem; /* Fixed: was '2rem rem' */
+  }
+}

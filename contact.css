@@ -1,0 +1,194 @@
+/* ====================================================
+   CONTACT SECTION
+==================================================== */
+
+#contact {
+  padding: 17px 5%;
+  margin-bottom: 100px;
+}
+
+.contact-heading {
+  font-size: 3rem;
+  background: linear-gradient(to right, #00f0ff, #ff00c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+/* Layout container */
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* === Left Info Section === */
+.contact-left {
+  flex: 1;
+  min-width: 240px;
+  color: #d1d1ff;
+}
+
+.contact-left h3 {
+  font-size: 1.6rem;
+  color: #2ca1a1;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin-bottom: 50px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.info-item i {
+  color: #187e7e;
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* === Right Form Section === */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #003cff, #ea00ff);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+/* ====================================================
+   RESPONSIVE CONTACT SECTION
+==================================================== */
+
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 1rem;
+  }
+
+  .contact-heading {
+    font-size: 2.2rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-left,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-left h3 {
+    font-size: 1.3rem;
+  }
+
+  .contact-left p {
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+  }
+
+  .info-item {
+    font-size: 0.95rem;
+  }
+
+  .contact-form {
+    padding: 1.2rem;
+  }
+
+  .contact-form label {
+    font-size: 0.95rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+}
+
+/* ====================================================
+   FOOTER SECTION
+==================================================== */
+
+.footer {
+  background-color: #0000001f;
+  padding: 30px 5%;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content p {
+  color: #aaa;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-icons a {
+  margin: 0 10px;
+  color: #00f0ff;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #ff00c8;
+  transform: scale(1.2);
+}
